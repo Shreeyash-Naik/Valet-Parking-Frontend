@@ -1,0 +1,393 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html, body {
+    height:100%;
+    width:100%;
+    background-color: #E9E9E9;
+}
+
+.wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    padding: 0px;
+    background-color: #4b4276;
+    height: 100%;
+}
+
+.sidebar ul li {
+    font-size: 22px;
+    padding: 30px;
+}
+
+.sidebar ul li a {
+    color: #bdb8d7;
+}
+
+.sidebar ul li:hover{
+    background-color: #594f8d;
+}
+
+.main-content {
+    height:100%;
+    width: 100%;
+}
+
+.header {
+    align-content: center;
+    font-family: sans-serif;
+    font-size: xx-large;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+
+.top {
+    padding: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard {
+    font: 30px;
+    flex: 12;
+    font-family: sans-serif;
+    font-size: x-large;
+
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    flex: 3;
+}
+
+.search-bar i {
+    z-index: 1;
+    padding: 0;
+    margin-right: -30px;
+}
+
+#query {
+    align-content: center;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+    border-radius: 20px;
+    
+}
+
+.check-in {
+    flex: 2;
+    width: 100%;
+}
+
+#check_in {
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b4276;
+    color: #bdb8d7;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s be, background-color 1s;
+}
+
+#check_in:hover {
+    background-color: #746b9e;
+    transform: scale(1.05);
+}
+
+.check-in .icon {
+    margin-right: 5px;
+}
+
+.vehicle-topbar {
+    display: flex;
+    font-size: 18px;
+    background-color: #fff;
+    padding: 15px;
+    margin: 7px;
+    border-radius: 7px;
+}
+
+.vehicle-number {
+    text-align: center;
+    flex: 1;
+}
+
+.vehicle-model {
+    text-align: center;
+    flex: 1;
+}
+
+.vehicle-type {
+    text-align: center;
+    flex: 1;
+}
+
+.phone {
+    text-align: center;
+    flex: 1;
+}
+
+.check-in-time {
+    text-align: center;
+    flex: 1;
+}
+
+.actions {
+    text-align: center;
+    flex: 1;
+}
+
+.vehicles {
+    width: 100%;
+}
+
+tr {
+    display: flex;
+    font-size: 20px;
+    background-color: #fff;
+    padding: 15px;
+    margin: 9px;
+    border-radius: 7px;
+}
+
+th, td {
+    flex: 1;
+    text-align:center;
+
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.check-in-form {
+    display: none;
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 10px 10px 5px #545454b8;
+}
+
+#_form {
+    height:100%;
+    width:100%;
+}
+
+.inline-bars {
+    width: 100%;
+    display: flex;
+}
+
+#go_back {
+    position: absolute;
+    right:0;
+    top:0;
+    border: none;
+    color:rgb(116, 8, 8);
+    font-size: 25px;
+    margin:5px;
+}
+
+#go_back i:hover {
+    transform: scale(1.15);
+}
+
+.input-bar {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold   ;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    margin-top: 7px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#submit_check_in {
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin:17px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4b4276;
+    color: #bdb8d7;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s be, background-color 1s;
+}
+
+.checkout-display {
+    display: none;
+    position: fixed;
+    height: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 10px 10px 5px #252525b8;
+}
+
+.checkout_specs {
+    width:100%;
+    margin: 20px;
+}
+
+.checkout_specs ul {
+    display: flex;
+    width: 100%;
+}
+
+.checkout_specs ul li {
+    flex: 1;
+}
+
+#to_pay {
+    position: absolute;
+    top:60%;
+    bottom:20%;
+    left:40%;
+    right:40%;
+    background-color: rgb(215, 240, 248);
+}
+
+#to_pay h1 {
+    text-align: center;
+    padding: 5px;
+}
+
+
+#proceed_to_pay {
+    position: absolute;
+    top: 85%;
+    bottom: 5%;
+    left:40%;
+    right:40%;
+    color: white;
+    font-size: large;
+    background-color: #4b4276;
+    transition: transform 0.3s be, background-color 1s;
+}
+
+#proceed_to_pay:hover {
+    background-color: #746b9e;
+    transform: scale(1.05);
+}
+
+.payment-successful {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    background-color: #fff;
+    top: 25%;
+    bottom: 25%;
+    right: 30%;
+    left: 30%;
+    text-align:center;
+}
+
+.payment-successful h1 {
+    padding: 10px;
+}
+
+#tick_in_circle {
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    left: 38%;
+    right: 38%;
+    border-radius: 50%;
+    border-top: 7px solid transparent;
+    border-left: 7px solid green;
+    border-right: 7px solid green;
+    border-bottom: 7px solid green;
+    transform: rotate(45deg);
+}
+
+#tick_left {
+    position: absolute;
+    left: 55%;
+    right: 40%;
+    top:40%;
+    bottom: 25%;
+    background-color: green;
+    transform-origin: bottom;
+    transform: rotate(-90deg)
+}
+
+#tick_right {
+    position: absolute;
+    left: 55%;
+    right: 40%;
+    top:0%;
+    bottom: 23%;
+    background-color: green;
+}
+
+.vehicles button {
+    background-color: #fff;
+    border: none;
+    color: blueviolet;
+    font-size: large;
+}
+
+.vehicles button:hover {
+    transform: scale(1.05);
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valet Parking</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="#">
+    
+    <script src="https://kit.fontawesome.com/xxxxfont_awesome_keyxxxx.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-address-card"></i></a></li>
+                <li><a href="#"><i class="fas fa-map-pin"></i></a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                Valet Parking
+            </div>
+            <div class="content">
+                <div class="top">
+                    <div class="dashboard">
+                       <p> Dashboard </p>
+                    </div>
+                    <div class="search-bar">
+                        <i class="fa fa-search icon"></i>
+                        <input type="text" placeholder="Search by Vehicle Number" name="query" id="query">
+                    </div>
+                    <div class="check-in">
+                        <button id="check_in" type="submit"><i class="fa fa-plus icon"></i>Check-In</button>
+                    </div>
+                </div>
+
+                <table class="vehicles">
+                    <tr>
+                        <th>
+                            Vehicle No
+                            <i class="fa fa-caret-down"></i> 
+                        </th>
+                        <th>
+                            Vehicle Model
+                            <i class="fa fa-caret-down"></i>
+                        </th>
+                        <th>
+                            Vehicle Type
+                            <i class="fa fa-caret-down"></i>
+                        </th>
+                        <th>
+                            Phone
+                            <i class="fa fa-caret-down"></i>
+                        </th>
+                        <th>
+                            Check in
+                            <i class="fa fa-caret-down"></i>
+                        </th>
+                        <th>
+                            Actions
+                            <i class="fa fa-caret-down"></i>
+                        </th>
+                    </tr>
+
+                </table>
+            </div>
+            
+            
+
+            <div class="check-in-form">
+                <h2>Vehicle Check-In</h2>
+                <form id="_form" method="post">
+                    <div class="inline-bars">
+                        <div class="input-bar">
+                            <label for="vehicle_number">Vehicle Number</label><br>
+                            <input type="text" id="vehicle_number" name="vehicle_number" placeholder="Enter vehicle number"><br>
+                            <small></small>
+                        </div>
+                        <div class="input-bar">
+                            <label for="vehicle_type">Vehicle Type</label><br>
+                            <input type="text" id="vehicle_type" name="vehicle_type" placeholder="Enter vehicle number"><br>
+                            <small></small>
+                        </div>
+                    </div>
+
+                    <div class="inline-bars">
+                        <div class="input-bar">
+                            <label for="vehicle_model">Vehicle Model</label><br>
+                            <input type="text" id="vehicle_model" name="vehicle_model" placeholder="Enter vehicle model"><br>
+                            <small></small>
+                        </div>
+                        <div class="input-bar">
+                            <label for="phone_number">Phone Number</label><br>
+                            <input type="text" id="phone_number" name="phone_number" placeholder="Enter phone number"><br>
+                            <small></small>
+                        </div>
+                    </div>
+
+                    <div class="inline-bars">
+                        <div class="input-bar">
+                            <label for="customer_name">Customer Name</label><br>
+                            <input type="text" id="customer_name" name="customer_name" placeholder="Enter name"><br>
+                            <small></small>
+                        </div>
+                    </div>
+
+                    <button id="submit_check_in" type="submit">Check In</button>
+                </form>
+                <button id="go_back" type="submit"><i class="fa-solid fa-circle-xmark icon"></i></button>
+            </div>
+            <div class="checkout-display">
+                <h2>Check out</h2>
+                <div class="checkout_specs">
+                    <ul>
+                        <li id="checkout_customer_name">
+                            <p>Customer Name</p>
+                            
+                        </li>
+                        <li id="checkout_phone_number">
+                            <p>Phone Number</p>
+                            
+                        </li>
+                        <li id="checkout_vehicle_number">
+                            <p>Vehicle Number</p>
+                           
+                        </li>
+                        <li id="checkout_vehicle_type">
+                            <p>Vehicle Type</p>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="checkout_specs">
+                    <ul>
+                        <li id="checkout_vehicle_model">
+                            <p>Vehicle Model</p>
+                        </li>
+                        <li id="checkout_cin_time">
+                            <p>Check In Time</p>
+                        </li>
+                        <li id="checkout_cout_time">
+                            <p>Checkout Time</p>
+                        </li>
+                        <li id="checkout_duration">
+                            <p>Duration</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="to_pay">
+                    <h1>To Pay</h1>
+                </div>
+
+                <button id="proceed_to_pay" type="click">Proceed to Pay</button>
+            </div>
+
+            <div class="payment-successful">
+                <div id="tick_in_circle">
+                    <div id="tick_left">
+                    </div>
+                    <div id="tick_right">
+                    </div>
+                </div>
+                <h1>Payment Successful</h1>
+            </div>
+            <div id="overlay"></div>
+
+        </div>
+    </div>
+
+    <script src="/front-end/index.js"></script>
+</body>
+</html>
